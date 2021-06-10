@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            localStorage.setItem("key", "from page 1")
+        </script>
+    </head>
+    <body>
+        <iframe src="https://127.0.0.2:18888/page/localstorage_test2.html">
+        </iframe>
+        <div id="content"></div>
+        <script>
+            setTimeout(() => {
+                document.getElementById("content").innerHTML = localStorage.getItem("key")
+            }, 1000);
+        </script>
+    </body>
+</html>
